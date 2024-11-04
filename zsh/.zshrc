@@ -198,6 +198,10 @@ function killport(){
   kill -9 $(checkport $argv[1])
 }
 
+function check_tcp_port(){
+  lsof -nP -i TCP -s TCP:LISTEN
+}
+
 function ide(){
   tmux new-session 'ping  127.0.0.1' \; \
       split-window 'ping  127.0.0.1' \; \
