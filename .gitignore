@@ -42,3 +42,11 @@ luac.out
 .DS_Store
 nvim/plugin/packer_compiled.lua
 tmux/plugins
+
+!zsh/
+!zsh/**
+zsh/.zsh_history
+zsh/.zsh_sessions
+zsh/.zcompdump
+zsh/.zcompcache
+zsh/extra.zsh
