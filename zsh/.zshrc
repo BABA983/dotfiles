@@ -80,3 +80,6 @@ setopt HIST_REDUCE_BLANKS    # Remove superfluous blanks from each command line 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 . "$HOME/.deno/env"
+
+# bun completions
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
