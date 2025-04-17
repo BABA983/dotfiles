@@ -23,6 +23,8 @@ brew install --cask alacritty
 brew install --cask wezterm
 brew install --cask karabiner-elements
 brew install --cask firefox
+
+curl -s https://cht.sh/:cht.sh | sudo tee /usr/local/bin/cht.sh && sudo chmod +x /usr/local/bin/cht.sh
 ```
 
 ### Linux
