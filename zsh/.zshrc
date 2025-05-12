@@ -14,7 +14,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME="agnoster"
 # ZSH_THEME="spaceship"
 # ZSH_THEME="powerlevel10k/powerlevel10k"
-source "/opt/homebrew/opt/spaceship/spaceship.zsh"
+ZSH_THEME="spaceship"
 SPACESHIP_TIME_SHOW=true
 
 plugins=(
@@ -53,10 +53,18 @@ unset file;
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=4"
 
-eval $(thefuck --alias)
+if command -v thefuck &> /dev/null; then
+    eval $(thefuck --alias)
+fi
 
 # fzf key bindings for command-line
-source <(fzf --zsh)
+if [[ "$(uname)" == "Darwin" ]]; then
+  source <(fzf --zsh)
+else
+  # apt show fzf -a
+  echo "source fzf keybinding"
+  source /usr/share/doc/fzf/examples/key-bindings.zsh
+fi
 
 if command -v ngrok &>/dev/null; then
   eval "$(ngrok completion)"
@@ -79,7 +87,11 @@ setopt HIST_REDUCE_BLANKS    # Remove superfluous blanks from each command line 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-. "$HOME/.deno/env"
+[ -s "$HOME/.deno/env" ] && source "$HOME/.deno/env"
 
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

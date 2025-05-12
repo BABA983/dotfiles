@@ -52,3 +52,9 @@ function ide(){
       split-window 'ping  127.0.0.1' \; \
       select-layout even-vertical
 }
+
+# export ALL_PROXY="http://$(get-wsl-host-ip):7890"
+function get-wsl-host-ip(){
+    local host_ip=$(cat /etc/resolv.conf | grep "nameserver" | cut -f 2 -d " ")
+    echo $host_ip
+}

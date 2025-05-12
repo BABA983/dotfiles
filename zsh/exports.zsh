@@ -3,7 +3,16 @@ export MANPAGER='nvim +Man!'
 
 export TMUX_TMPDIR=~/.tmux/tmp
 
-export PATH="/opt/homebrew/opt/gnu-getopt/bin:$PATH"
+if [ -d "/opt/homebrew/opt/gnu-getopt" ]; then
+  export PATH="/opt/homebrew/opt/gnu-getopt/bin:$PATH"
+fi
+if [[ "$(uname)" == "Linux" ]]; then
+  export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+fi
+
+if [ -d "/usr/local/go" ]; then
+    export PATH="$PATH:/usr/local/go/bin"
+fi
 
 # pnpm
 export PNPM_HOME="$HOME/Library/pnpm"
