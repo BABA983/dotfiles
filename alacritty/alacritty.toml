@@ -31,26 +31,8 @@ blinking = "Never"
 
 [font]
 size = 16.0
-
-[font.bold]
-family = "Hack Nerd Font"
-style = "Bold"
-
-[font.glyph_offset]
-x = 0
-y = 0
-
-[font.italic]
-family = "Hack Nerd Font"
-style = "Italic"
-
-[font.normal]
-family = "Hack Nerd Font"
-style = "Regular"
-
-[font.offset]
-x = 0
-y = 0
+normal = { family = "JetBrains Maple Mono" }
+glyph_offset = { x = 0, y = 0 }
 
 [[keyboard.bindings]]
 action = "Paste"
@@ -80,11 +62,10 @@ mods = "Control"
 [window]
 # decorations = "none"
 dynamic_title = true
+padding = { x = 4, y = 4 }
+dynamic_padding = true
 
 [selection]
 save_to_clipboard = true
 semantic_escape_chars = ",‚îÇ`|:\"' ()[]{}<>"
 
-[window.padding]
-x = 4
-y = 4

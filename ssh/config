@@ -22,5 +22,12 @@ HostName 192.168.10.208
 User root
 IdentityFile ~/.ssh/id_rsa_personal
 
+# mkdir -p ~/.1password && ln -s ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock ~/.1password/agent.sock
+Host github.com
+    Hostname ssh.github.com
+    Port 443
+Host *
+    IdentityAgent ~/.1password/agent.sock
+
 # RequestTTY yes # ensure that we attach our terminal input
 # RemoteCommand tmux attach # attach to the tmux session

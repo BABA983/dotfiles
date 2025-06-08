@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
-TARGET_PATH="$HOME/.config"
+TARGET_PATH="$HOME/.config/aerospace"
 
-ln -s "$PWD/aerospace" "$TARGET_PATH/aerospace"
+mkdir -p "$TARGET_PATH"
+ln -s "$PWD/aerospace/aerospace.toml" "$TARGET_PATH"
