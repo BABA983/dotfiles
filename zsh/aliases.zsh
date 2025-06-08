@@ -7,7 +7,6 @@ if command -v exa &> /dev/null; then
     alias ls='exa -G --icons'
     alias lsa='exa -lah --icons --git'
 else
-    # 回退到 ls（带颜色）
     alias l='ls -lah --color=auto'
     alias la='ls -lAh --color=auto'
     alias ll='ls -lh --color=auto'

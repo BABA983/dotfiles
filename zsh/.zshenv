@@ -10,4 +10,4 @@ KEYTIMEOUT=1  # makes the switch between modes quicker
 HISTORY_SUBSTRING_SEARCH_PREFIXED=1  # enables prefixed search for zsh-history-substring-search
 
 # Software specific
-. "$HOME/.cargo/env"
+[ -e "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"

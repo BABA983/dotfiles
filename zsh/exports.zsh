@@ -21,8 +21,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
-export PATH="$HOME/Documents/workspace_github/depot_tools:$PATH"
-
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 

@@ -3,4 +3,5 @@ set -e
 
 TARGET_PATH="$HOME/.config/alacritty"
 
-ln -s "$PWD/alacritty" "$TARGET_PATH"
+mkdir -p "$TARGET_PATH"
+ln -s "$PWD/alacritty/alacritty.toml" "$TARGET_PATH"
