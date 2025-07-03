@@ -1,0 +1,289 @@
+{
+    "editor.tabSize": 4,
+    "editor.fontFamily": "JetBrains Maple Mono, Hack Nerd Font, Menlo, Monaco, 'Courier New', monospace",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorBlinking": "solid",
+    "editor.insertSpaces": false,
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "editor.suggest.preview": true,
+    "editor.fontSize": 14,
+    "editor.minimap.renderCharacters": false,
+    "editor.smoothScrolling": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.accessibilitySupport": "off",
+    "editor.suggest.showStatusBar": true,
+    "editor.linkedEditing": true,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "explorer.compactFolders": false,
+    "workbench.list.horizontalScrolling": true,
+    "workbench.editor.pinnedTabsOnSeparateRow": true,
+    "workbench.colorCustomizations": {
+        // "terminal.background": "#323232",
+        "terminal.foreground": "#d8d8d8",
+        "terminalCursor.background": "#D8D8D8",
+        "terminalCursor.foreground": "#D8D8D8",
+        "terminal.ansiBlack": "#252525",
+        "terminal.ansiBrightBlack": "#252525",
+        "terminal.ansiRed": "#df9997",
+        "terminal.ansiBrightRed": "#df9997",
+        "terminal.ansiGreen": "#badb97",
+        "terminal.ansiBrightGreen": "#badb97",
+        "terminal.ansiYellow": "#dfbc98",
+        "terminal.ansiBrightYellow": "#e9d2bc",
+        "terminal.ansiBlue": "#97bcde",
+        "terminal.ansiBrightBlue": "#97bcde",
+        "terminal.ansiMagenta": "#debddd",
+        "terminal.ansiBrightMagenta": "#debddd",
+        "terminal.ansiCyan": "#99dfc1",
+        "terminal.ansiBrightCyan": "#bdeae3",
+        "terminal.ansiWhite": "#d8d8d8",
+        "terminal.ansiBrightWhite": "#f2f2f2",
+        "terminal.selectionBackground": "#5f5f5f",
+        "terminal.integrated.cursorBlinking": true,
+        "terminal.integrated.lineHeight": 1.6,
+        "terminal.integrated.letterSpacing": 0.1,
+        // "terminal.integrated.fontSize": 30,
+        // "terminal.integrated.fontFamily": "Lucida Console",
+        "terminal.integrated.shell.linux": "/bin/zsh"
+    },
+    "emmet.triggerExpansionOnTab": true,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": true,
+        "markdown": true,
+        "typescript": true
+    },
+    "window.confirmBeforeClose": "keyboardOnly",
+    //#region vim
+    "vim.foldfix": true,
+    "vim.leader": "<Space>",
+    "vim.useCtrlKeys": true,
+    "vim.useSystemClipboard": true,
+    "vim.smartRelativeLine": true,
+    "vim.hlsearch": true,
+    "vim.surround": true,
+    "vim.easymotion": true,
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false
+    },
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "leader",
+                "e"
+            ],
+            "commands": [
+                {
+                    "command": "workbench.action.toggleSidebarVisibility"
+                }
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "f"
+            ],
+            "commands": [
+                {
+                    "command": "revealInExplorer"
+                }
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "a"
+            ],
+            "commands": [
+                {
+                    "command": "workbench.action.toggleActivityBarVisibility"
+                }
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "b"
+            ],
+            "commands": [
+                {
+                    "command": "workbench.action.toggleStatusbarVisibility"
+                }
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "g",
+                "f"
+            ],
+            "commands": [
+                {
+                    "command": "workbench.view.search"
+                }
+            ]
+        },
+        // { "before": ["[", "d"], "commands": ["editor.action.marker.prev"] },
+        // { "before": ["]", "d"], "commands": ["editor.action.marker.next"] },
+        // { "before": [ "<leader>", "p" ], "commands": [ "workbench.action.quickOpen" ] },
+        // { "before": [ "<leader>", "P" ], "commands": [ "workbench.action.showCommands" ] },
+        {
+            "before": [
+                "<leader>",
+                "o"
+            ],
+            "commands": [
+                "workbench.action.gotoSymbol"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "O"
+            ],
+            "commands": [
+                "workbench.action.showAllSymbols"
+            ]
+        },
+        // { "before": [ "<leader>", "h" ], "commands": [ "workbench.action.splitEditorDown" ] },
+        // { "before": [ "<leader>", "v" ], "commands": [ "workbench.action.splitEditorRight" ] },
+        {
+            "before": [
+                "="
+            ],
+            "commands": [
+                "editor.action.smartSelect.expand"
+            ]
+        },
+        {
+            "before": [
+                "-"
+            ],
+            "commands": [
+                "editor.action.smartSelect.shrink"
+            ]
+        }
+    ],
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        // "after": ["<", "g", "v"],
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+        // "after": [">", "g", "v"],
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        }
+    ],
+    "vim.operatorPendingModeKeyBindings": [],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<Esc>"
+            ],
+            "when": [
+                "editorFocus"
+            ],
+            "commands": [
+                ":nohl"
+            ],
+            "silent": true
+        },
+        {
+            "before": [
+                "g",
+                "r"
+            ],
+            "commands": [
+                "editor.action.referenceSearch.trigger"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "R"
+            ],
+            "commands": [
+                "references-view.findReferences"
+            ]
+        },
+        // TODO: I don't know why this doesn't work
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "k"
+            ],
+            "commands": [
+                "workbench.action.editor.previousChange",
+                "editor.action.dirtydiff.previous"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "j"
+            ],
+            "commands": [
+                "workbench.action.editor.nextChange",
+                "editor.action.dirtydiff.next"
+            ]
+        },
+        // git stage
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "r"
+            ],
+            "commands": [
+                "git.revertSelectedRanges"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "p"
+            ],
+            "after": [
+                "p",
+                "g",
+                "v",
+                "y"
+            ]
+        }
+    ],
+    //#endregion
+    "search.mode": "reuseEditor",
+    "search.searchEditor.defaultNumberOfContextLines": 5,
+    "files.trimTrailingWhitespace": true,
+    "files.defaultLanguage": "${activeEditorLanguage}",
+    "audioCues.volume": 0,
+    "gitlens.views.commitDetails.files.layout": "tree",
+    "diffEditor.ignoreTrimWhitespace": false
+}
