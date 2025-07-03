@@ -58,3 +58,7 @@ function get-wsl-host-ip(){
     local host_ip=$(cat /etc/resolv.conf | grep "nameserver" | cut -f 2 -d " ")
     echo $host_ip
 }
+
+function cd-npm-root-global() {
+  cd $(npm root -g)
+}

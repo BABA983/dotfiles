@@ -14,7 +14,7 @@ sh install-gitconfig.sh
 ## Software setup
 
 tmux
-exa
+eza
 fzf
 thefuck
 difftastic
@@ -22,6 +22,7 @@ ripgrep
 zoxide
 
 ## oh-my-zsh setup
+
 ```bash
 # install zsh(optional)
 sudo apt install zsh
@@ -62,6 +63,7 @@ curl -s https://cht.sh/:cht.sh | sudo tee /usr/local/bin/cht.sh && sudo chmod +x
 ```
 
 #### Increase key repeat rate
+
 ```bash
 # System Preferences » Keyboard » Key Repeat/Delay Until Repeat
 # https://gist.github.com/hofmannsven/ff21749b0e6afc50da458bebbd9989c5
@@ -71,7 +73,15 @@ defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 defaults write -g ApplePressAndHoldEnabled -bool false
 ```
 
-### Windows Subsystem for Linux 
+#### Disable input source keyboard shortcut
+
+#### CleanshotX
+
+You may need to delete the permissions and add them again, use the terminal input the following command to reset the permissions
+
+tccutil reset All pl.maketheweb.cleanshotx
+
+### Windows Subsystem for Linux
 
 ```bash
 # setup proxy in WSL
@@ -97,3 +107,5 @@ git clone git@github.com:BABA983/Lazyvim.git ~/.config/nvim
 [Homebrew](https://brew.sh/)
 
 [清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/)
+
+[macOS defaults cli](https://macos-defaults.com/)

@@ -1,11 +1,11 @@
 alias v=nvim
 
-if command -v exa &> /dev/null; then
-    alias l='exa -lah --icons --git'
-    alias la='exa -lAh --icons --git'
-    alias ll='exa -lh --icons --git'
-    alias ls='exa -G --icons'
-    alias lsa='exa -lah --icons --git'
+if command -v eza &> /dev/null; then
+    alias l='eza -lah --icons --git'
+    alias la='eza -lAh --icons --git'
+    alias ll='eza -lh --icons --git'
+    alias ls='eza -G --icons'
+    alias lsa='eza -lah --icons --git'
 else
     alias l='ls -lah --color=auto'
     alias la='ls -lAh --color=auto'
