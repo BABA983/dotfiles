@@ -52,7 +52,7 @@ git clone https://github.com/zsh-users/zsh-completions.git ${ZSH_CUSTOM:-${ZSH:-
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew install tmux
 # brew install tmuxinator tmuxinator-completion
-brew install exa fzf tmux
+brew install eza fzf tmux
 
 brew install --cask alacritty
 brew install --cask wezterm
@@ -73,7 +73,36 @@ defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 defaults write -g ApplePressAndHoldEnabled -bool false
 ```
 
+#### Reduce .DS_Store files
+
+```bash
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+defaults write com.apple.desktopservices DSDontWriteStores -bool true
+```
+
+#### Show hidden files
+
+```bash
+defaults write com.apple.finder AppleShowAllFiles -bool true
+```bash
+
+#### keyboard shortcuts
+
+- input source: `Control + Space` which will conflict with vscode
+- function keys: as standard function keys
+
+#### CapsLock
+
+```bash
+hidutil property --set '{"CapsLockDelayOverride":0}'
+```
+
 #### Disable input source keyboard shortcut
+
+#### Finder relative date format
+
+https://gist.github.com/rxliuli/629da07479b70d6235088828cdb1bd8f
 
 #### CleanshotX
 
