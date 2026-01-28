@@ -1,30 +1,8 @@
-[colors.bright]
-black = "#676767"
-blue = "#97bcde"
-cyan = "#bdeae3"
-green = "#badb97"
-magenta = "#debddd"
-red = "#df9997"
-white = "#abb2bf"
-yellow = "#e9d2bc"
-
-[colors.cursor]
-cursor = "#ECEFF4"
-text = "#3B4252"
-
-[colors.normal]
-black = "#252525"
-blue = "#97bcde"
-cyan = "#99dfc1"
-green = "#badb97"
-magenta = "#debddd"
-red = "#df9997"
-white = "#abb2bf"
-yellow = "#dfbc98"
-
-[colors.primary]
-background = "#1f2227"
-foreground = "#abb2bf"
+[general]
+import = [
+"./flexoki-dark.toml"
+#"./color-bak.toml"
+]
 
 [cursor.style]
 blinking = "Never"
@@ -60,12 +38,13 @@ key = "Minus"
 mods = "Control"
 
 [window]
-# decorations = "none"
+blur = true
+decorations = "Buttonless"
 dynamic_title = true
-padding = { x = 4, y = 4 }
 dynamic_padding = true
+padding = { x = 2, y = 2 }
+resize_increments = true
 
 [selection]
 save_to_clipboard = true
 semantic_escape_chars = ",‚îÇ`|:\"' ()[]{}<>"
-
