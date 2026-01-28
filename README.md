@@ -41,6 +41,7 @@ git clone https://github.com/jeffreytse/zsh-vi-mode $ZSH_CUSTOM/plugins/zsh-vi-m
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions --depth=1
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting --depth=1
 git clone https://github.com/marlonrichert/zsh-autocomplete.git ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-autocomplete --depth=1
+git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-tab
 
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting --depth=1
 git clone https://github.com/zsh-users/zsh-completions.git ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions --depth=1
@@ -83,7 +84,7 @@ defaults write com.apple.desktopservices DSDontWriteStores -bool true
 
 #### Show hidden files
 
-```bash
+````bash
 defaults write com.apple.finder AppleShowAllFiles -bool true
 ```bash
 
@@ -96,7 +97,7 @@ defaults write com.apple.finder AppleShowAllFiles -bool true
 
 ```bash
 hidutil property --set '{"CapsLockDelayOverride":0}'
-```
+````
 
 #### Disable input source keyboard shortcut
 
