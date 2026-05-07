@@ -1,5 +1,6 @@
 theme = "Flexoki Dark"
 
+font-family = "TX-02"
 font-family = "JetBrains Maple Mono"
 font-size = 14
 
@@ -7,6 +8,8 @@ font-size = 14
 
 background-blur = 40
 background-opacity = 0.85
+
+auto-update-channel=tip
 
 macos-icon = blueprint
 macos-titlebar-style = tabs
