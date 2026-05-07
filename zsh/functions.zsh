@@ -62,3 +62,7 @@ function get-wsl-host-ip(){
 function cd-npm-root-global() {
   cd $(npm root -g)
 }
+
+function randomHex() {
+  openssl rand -hex 32
+}
