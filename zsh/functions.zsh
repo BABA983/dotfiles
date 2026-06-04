@@ -66,3 +66,10 @@ function cd-npm-root-global() {
 function randomHex() {
   openssl rand -hex 32
 }
+
+# fnm_upgrade 22.15.1
+function fnm_upgrade() {
+  fnm exec --using=$1 npm ls --global --json \
+    | jq -r '.dependencies | to_entries[] | .key+"@"+.value.version' \
+    | xargs npm i -g
+}
