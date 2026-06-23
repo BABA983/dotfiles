@@ -461,3 +461,35 @@ bind M command-prompt "splitw -h 'exec man %%'"
 set -sg repeat-time 300                   # increase repeat timeout
 
 set -g extended-keys on
+
+# ==========================================
+# 1. 拖拽选中 (Mouse Drag)
+# ==========================================
+if-shell "uname | grep -q Darwin" \
+    'bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe "pbcopy" \; send-keys -X clear-selection' \
+    'bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe "xclip -in -selection clipboard" \; send-keys -X clear-selection'
+
+# ==========================================
+# 2. 双击选中单词 (Double Click)
+# ==========================================
+# 在普通模式下双击：进入复制模式，选中单词，复制到剪贴板，但不退出/不回滚
+if-shell "uname | grep -q Darwin" \
+    'bind-key -n DoubleClick1Pane select-pane \; copy-mode \; send-keys -X select-word \; run-shell "sleep 0.1" \; send-keys -X copy-pipe "pbcopy" \; send-keys -X clear-selection' \
+    'bind-key -n DoubleClick1Pane select-pane \; copy-mode \; send-keys -X select-word \; run-shell "sleep 0.1" \; send-keys -X copy-pipe "xclip -in -selection clipboard" \; send-keys -X clear-selection'
+
+# 在已经进入复制模式的情况下双击：同上
+if-shell "uname | grep -q Darwin" \
+    'bind-key -T copy-mode-vi DoubleClick1Pane send-keys -X select-word \; run-shell "sleep 0.1" \; send-keys -X copy-pipe "pbcopy" \; send-keys -X clear-selection' \
+    'bind-key -T copy-mode-vi DoubleClick1Pane send-keys -X select-word \; run-shell "sleep 0.1" \; send-keys -X copy-pipe "xclip -in -selection clipboard" \; send-keys -X clear-selection'
+
+# ==========================================
+# 3. 三击选中整行 (Triple Click)
+# ==========================================
+# 在普通模式下三击
+if-shell "uname | grep -q Darwin" \
+    'bind-key -n TripleClick1Pane select-pane \; copy-mode \; send-keys -X select-line \; run-shell "sleep 0.1" \; send-keys -X copy-pipe "pbcopy" \; send-keys -X clear-selection' \
+    'bind-key -n TripleClick1Pane select-pane \; copy-mode \; send-keys -X select-line \; run-shell "sleep 0.1" \; send-keys -X copy-pipe "xclip -in -selection clipboard" \; send-keys -X clear-selection'
+
+if-shell "uname | grep -q Darwin" \
+    'bind-key -T copy-mode-vi TripleClick1Pane send-keys -X select-line \; run-shell "sleep 0.1" \; send-keys -X copy-pipe "pbcopy" \; send-keys -X clear-selection' \
+    'bind-key -T copy-mode-vi TripleClick1Pane send-keys -X select-line \; run-shell "sleep 0.1" \; send-keys -X copy-pipe "xclip -in -selection clipboard" \; send-keys -X clear-selection'
